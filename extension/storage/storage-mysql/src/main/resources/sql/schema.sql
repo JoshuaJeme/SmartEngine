@@ -14,7 +14,7 @@ CREATE TABLE `se_deployment_instance` (
   `logic_status` varchar(64) NOT NULL  COMMENT 'logic status' ,
 
   PRIMARY KEY (`id`)
-)  ;
+);
 
 CREATE TABLE `se_process_instance` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT  COMMENT 'PK'  ,
@@ -33,7 +33,7 @@ CREATE TABLE `se_process_instance` (
   `tag` varchar(255) DEFAULT NULL  COMMENT 'tag' ,
 
   PRIMARY KEY (`id`)
-)   ;
+);
 
 CREATE TABLE `se_activity_instance` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT  COMMENT 'PK'  ,
@@ -43,7 +43,7 @@ CREATE TABLE `se_activity_instance` (
   `process_definition_id_and_version` varchar(255) NOT NULL  COMMENT 'process definition id and version'  ,
   `process_definition_activity_id` varchar(64) NOT NULL COMMENT 'process definition activity id'   ,
   PRIMARY KEY (`id`)
-)  ;
+);
 
 CREATE TABLE `se_task_instance` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT  COMMENT 'PK'  ,
@@ -66,7 +66,7 @@ CREATE TABLE `se_task_instance` (
   `extension` varchar(255) DEFAULT NULL COMMENT 'extension'  ,
 
   PRIMARY KEY (`id`)
-)   ;
+);
 
 CREATE TABLE `se_execution_instance` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT 'PK'   ,
@@ -78,7 +78,7 @@ CREATE TABLE `se_execution_instance` (
   `activity_instance_id` bigint(20) unsigned NOT NULL COMMENT 'activity instance id'   ,
   `active` tinyint(4) NOT NULL COMMENT '1:active 0:inactive',
   PRIMARY KEY (`id`)
-)   ;
+);
 
 
 CREATE TABLE `se_task_assignee_instance` (
@@ -90,7 +90,7 @@ CREATE TABLE `se_task_assignee_instance` (
   `assignee_id` varchar(255) NOT NULL  COMMENT 'assignee id'  ,
   `assignee_type` varchar(128) NOT NULL  COMMENT 'assignee type'  ,
   PRIMARY KEY (`id`)
-)  ;
+);
 
 
 CREATE TABLE `se_variable_instance` (
@@ -106,4 +106,4 @@ CREATE TABLE `se_variable_instance` (
   `field_string_value` varchar(4000) DEFAULT NULL  COMMENT 'field string value' ,
 
   PRIMARY KEY (`id`)
-)  ;
+);
